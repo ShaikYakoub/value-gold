@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --color-background: #e2e8f0;
+    --color-foreground: #1e293b;
+    --color-card: #ffffff;
+    --color-card-foreground: #1e293b;
+    --color-primary: #2563eb;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #f8fafc;
+    --color-secondary-foreground: #475569;
+    --color-accent: #f59e0b;
+    --color-accent-foreground: #000000;
+  }
+
+  .dark {
+    --color-background: #1f1f1f;
+    --color-foreground: #f1f5f9;
+    --color-card: #000000;
+    --color-card-foreground: #f1f5f9;
+    --color-primary: #f59e0b;
+    --color-primary-foreground: #0f172a;
+    --color-secondary: #0a0a0a;
+    --color-secondary-foreground: #cbd5e1;
+    --color-accent: #2563eb;
+    --color-accent-foreground: #ffffff;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Section styling - rounded with margin for body color to show */
+  main > section,
+  main > div > section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  main > section:first-child {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  /* Scroller section - no top rounded corners, attached to above, rounded bottom */
+  main > section.scroller-section {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
+  }
+
+  /* Section before scroller - no bottom rounded corners */
+  main > section.no-bottom-radius {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Section after another - no top rounded corners */
+  main > section.no-top-radius {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* Heading Typography - Bold, Clear Hierarchy */
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* Primary Text - Body Copy */
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Secondary Text - Smaller, Lighter */
+  small, .text-secondary {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.75rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+/* Blinking animation for live indicator */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-blink {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+
