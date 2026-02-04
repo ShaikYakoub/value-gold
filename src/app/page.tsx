@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="min-h-screen md:min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-8 md:py-12 bg-white dark:bg-black">
+        <section className="min-h-screen md:min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-4 md:py-12 bg-white dark:bg-black">
           <div className="max-w-4xl mx-auto space-y-6">
             {/* Badge */}
             <div className="inline-block">
