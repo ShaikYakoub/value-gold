@@ -122,7 +122,7 @@ export default function OurLegacy() {
                     <p className="text-blue-600 dark:text-amber-400 font-semibold mb-4">
                       {person.title}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light text-justify md:text-left">
                       {person.bio}
                     </p>
                   </div>
