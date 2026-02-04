@@ -7,7 +7,7 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Hero Section */}
         <section className="py-16 bg-white dark:bg-black">
           <div className="max-w-6xl mx-auto px-6 text-center">

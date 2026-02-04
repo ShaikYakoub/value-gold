@@ -33,7 +33,7 @@ export default function ReleaseGoldPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-16">
         {/* Hero Section */}
         <section className="relative min-h-screen md:min-h-[500px] bg-gradient-to-br from-blue-600 to-blue-800 dark:from-amber-600 dark:to-amber-800 flex items-center justify-center">
           <div className="text-center text-white px-6 max-w-4xl">

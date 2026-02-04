@@ -156,35 +156,53 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground dark:text-foreground"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="relative w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full p-0.5 transition-colors border border-gray-300 dark:border-gray-600"
+              aria-label="Toggle theme"
             >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <div
+                className={`absolute w-6 h-6 bg-white dark:bg-black rounded-full shadow-md transform transition-all duration-300 flex items-center justify-center top-0.5 ${
+                  isDark ? "left-7" : "left-0.5"
+                }`}
+              >
+                <span className="text-xs">{isDark ? "🌙" : "☀️"}</span>
+              </div>
+            </button>
+            
+            {/* Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground dark:text-foreground"
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -236,14 +254,6 @@ export default function Navbar() {
             >
               Our Legacy
             </Link>
-            
-            <button
-              onClick={toggleTheme}
-              className="flex items-center gap-2 text-foreground dark:text-foreground"
-            >
-              <span>{isDark ? "🌙" : "☀️"}</span>
-              <span>Toggle {isDark ? "Light" : "Dark"} Mode</span>
-            </button>
           </div>
         )}
       </div>
