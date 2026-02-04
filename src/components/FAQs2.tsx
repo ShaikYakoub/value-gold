@@ -38,7 +38,7 @@ export default function FAQs() {
           Frequently Asked <span className="text-blue-600 dark:text-amber-500">Questions</span>
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-300 font-light mb-12">
-          Got questions? We've got answers
+          Got questions? We&apos;ve got answers
         </p>
 
         <div className="space-y-4">
