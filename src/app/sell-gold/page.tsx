@@ -33,7 +33,7 @@ export default function SellGoldPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative min-h-screen md:min-h-[500px] bg-gradient-to-br from-blue-600 to-blue-800 dark:from-amber-600 dark:to-amber-800 flex items-center justify-center">
+        <section className="relative min-h-screen md:min-h-[500px] bg-gradient-to-br from-blue-600 to-blue-800 dark:from-amber-600 dark:to-amber-800 flex items-center justify-center py-8 md:py-12">
           <div className="text-center text-white px-6 max-w-4xl">
             <div className="text-6xl mb-4">💰</div>
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-200 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">⭐ 120+ Years of Trust & Excellence</span>

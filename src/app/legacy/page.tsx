@@ -7,7 +7,7 @@ export default function LegacyPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-16">
+      <main>
         <OurLegacy2 />
       </main>
       <FloatingActions2 />
