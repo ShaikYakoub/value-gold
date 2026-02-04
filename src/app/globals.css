@@ -53,7 +53,8 @@
     border-radius: 1.5rem;
   }
 
-  main > section:first-child {
+  main > section:first-child,
+  main > div:first-child > section:first-child {
     margin-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
