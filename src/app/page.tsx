@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 bg-white dark:bg-black">
+        <section className="min-h-screen md:min-h-[90vh] flex flex-col items-center justify-center text-center px-6 bg-white dark:bg-black">
           <div className="max-w-4xl mx-auto space-y-6">
             {/* Badge */}
             <div className="inline-block">
@@ -43,7 +43,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a
-                href="#sell-gold-calculator"
+                href="/sell-gold#form"
                 className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-gray-900 font-bold rounded-lg shadow-lg hover:shadow-xl transition-all text-lg"
               >
                 Sell Gold Now

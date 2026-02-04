@@ -81,10 +81,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-black/80 backdrop-blur-md ${
         scrolled
-          ? "bg-background/80 dark:bg-background/90 backdrop-blur-md shadow-md border-b border-secondary dark:border-secondary"
-          : "bg-transparent"
+          ? "shadow-md border-b border-blue-100/50 dark:border-amber-500/20"
+          : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">

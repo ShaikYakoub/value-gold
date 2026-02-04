@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const slides = [
   { id: 1, title: "Slide 1", color: "from-primary to-accent" },
@@ -12,6 +12,8 @@ const slides = [
 
 export default function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,8 +31,31 @@ export default function HeroSlider() {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      // Swiped left
+      goToNext();
+    } else if (touchEndX.current - touchStartX.current > 50) {
+      // Swiped right
+      goToPrevious();
+    }
+  };
+
   return (
-    <section className="no-bottom-radius relative w-full h-[500px] overflow-hidden bg-white dark:bg-black">
+    <section 
+      className="no-bottom-radius relative w-full h-[500px] overflow-hidden bg-white dark:bg-black"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (

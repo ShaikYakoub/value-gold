@@ -2,19 +2,16 @@ export default function OurLegacy() {
   return (
     <div className="contents">
       {/* Heritage Section */}
-      <section className="relative py-10 bg-gradient-to-br from-blue-600 to-blue-800 dark:from-amber-600 dark:to-amber-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center text-white mb-12">
+      <section className="relative min-h-screen md:min-h-auto py-10 md:py-10 bg-gradient-to-br from-blue-600 to-blue-800 dark:from-amber-600 dark:to-amber-800 flex items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full">
+          <div className="text-center text-white mb-8">
             <span className="inline-block px-4 py-1.5 bg-white/10 dark:bg-amber-400/20 text-white/90 dark:text-amber-100 text-sm font-medium rounded-full mb-4 border border-white/20 dark:border-amber-400/40">🏆 Since 1901</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">🏛️ Our Heritage</h2>
             <p className="text-xl text-white/70 font-light">A heritage of trust spanning over a century</p>
           </div>
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 dark:border-amber-400/30">
-            <p className="text-lg text-white/80 leading-relaxed mb-6 font-light">
-              Established in 1901, Caps Gold has built a proud legacy and has grown into one of India&apos;s most trusted gold and silver bullion merchants. We are committed to accountability, integrity, and reliability. Continuing this legacy, we founded Value Gold, a company that offers modern financial solutions while staying true to the values that have guided us for over a century.
-            </p>
-            <p className="text-lg text-white/80 leading-relaxed font-light">
-              Value Gold represents a thoughtful blend of heritage and innovation, ensuring our customers receive solutions that meet their changing needs. Our long-standing expertise in gold transactions has helped position Value Gold as a reliable and preferred choice for individuals looking to sell gold for instant money. Our commitment to quality and customer satisfaction has made us a leader in the industry.
+          <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-10 border border-white/20 dark:border-amber-400/30">
+            <p className="text-base md:text-lg text-white/80 leading-relaxed font-light">
+              Established in 1901, Caps Gold has built a proud legacy as one of India&apos;s most trusted gold and silver bullion merchants. Continuing this legacy, we founded Value Gold—a company that offers modern financial solutions while staying true to the values that have guided us for over a century. Our commitment to quality and customer satisfaction has made us a leader in the industry.
             </p>
           </div>
         </div>
@@ -116,9 +113,9 @@ export default function OurLegacy() {
               },
             ].map((person, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-blue-200 dark:border-amber-500/30">
-                <div className="flex items-start gap-6">
-                  <div className="text-6xl">{person.image}</div>
-                  <div className="flex-1">
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  <div className="text-6xl mx-auto md:mx-0">{person.image}</div>
+                  <div className="flex-1 text-center md:text-left">
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                       {person.name}
                     </h4>
